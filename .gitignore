@@ -1,0 +1,6 @@
+.venv/
+__pycache__/
+tmp/
+test_q_learning.py
+output/
+report.tex

@@ -1,0 +1,112 @@
+{
+  "environment": "Taxi-v4",
+  "training_seeds": [
+    0,
+    1,
+    2
+  ],
+  "validation_seed_start": 100000,
+  "test_seed_start": 200000,
+  "evaluation_episodes_per_seed": 300,
+  "baseline_config": {
+    "alpha": 0.5,
+    "gamma": 0.99,
+    "epsilon": 1.0,
+    "epsilon_min": 0.01,
+    "epsilon_decay": 0.9995,
+    "episodes": 10000
+  },
+  "best_config": {
+    "alpha": 0.1,
+    "gamma": 0.99,
+    "epsilon": 1.0,
+    "epsilon_min": 0.01,
+    "epsilon_decay": 0.9995,
+    "episodes": 10000
+  },
+  "selection": "Highest mean validation reward across training seeds; success rate breaks ties; remaining ties keep the first configuration. No joint grid search.",
+  "baseline": {
+    "episodes": 900,
+    "mean_reward": 7.973333333333334,
+    "reward_std": 2.6510710623779548,
+    "success_rate": 1.0,
+    "mean_steps": 13.026666666666667,
+    "mean_success_steps": 13.026666666666667
+  },
+  "best": {
+    "episodes": 900,
+    "mean_reward": 7.98,
+    "reward_std": 2.649452773687427,
+    "success_rate": 1.0,
+    "mean_steps": 13.02,
+    "mean_success_steps": 13.02
+  },
+  "saved_policy_training_seed": 0,
+  "saved_policy": {
+    "episodes": 300,
+    "mean_reward": 7.98,
+    "reward_std": 2.649452773687427,
+    "success_rate": 1.0,
+    "mean_steps": 13.02,
+    "mean_success_steps": 13.02
+  },
+  "noise": [
+    {
+      "noise": 0.0,
+      "retrained": {
+        "episodes": 900,
+        "mean_reward": 7.98,
+        "reward_std": 2.649452773687427,
+        "success_rate": 1.0,
+        "mean_steps": 13.02,
+        "mean_success_steps": 13.02
+      },
+      "original_policy": {
+        "episodes": 900,
+        "mean_reward": 7.98,
+        "reward_std": 2.649452773687427,
+        "success_rate": 1.0,
+        "mean_steps": 13.02,
+        "mean_success_steps": 13.02
+      }
+    },
+    {
+      "noise": 0.1,
+      "retrained": {
+        "episodes": 900,
+        "mean_reward": 0.9566666666666667,
+        "reward_std": 9.591043854670993,
+        "success_rate": 1.0,
+        "mean_steps": 15.203333333333333,
+        "mean_success_steps": 15.203333333333333
+      },
+      "original_policy": {
+        "episodes": 900,
+        "mean_reward": 1.0755555555555556,
+        "reward_std": 9.527554321966614,
+        "success_rate": 1.0,
+        "mean_steps": 15.094444444444445,
+        "mean_success_steps": 15.094444444444445
+      }
+    },
+    {
+      "noise": 0.25,
+      "retrained": {
+        "episodes": 900,
+        "mean_reward": -13.606666666666667,
+        "reward_std": 17.111229581119463,
+        "success_rate": 1.0,
+        "mean_steps": 19.566666666666666,
+        "mean_success_steps": 19.566666666666666
+      },
+      "original_policy": {
+        "episodes": 900,
+        "mean_reward": -13.12888888888889,
+        "reward_std": 15.917322809822599,
+        "success_rate": 1.0,
+        "mean_steps": 19.288888888888888,
+        "mean_success_steps": 19.288888888888888
+      }
+    }
+  ]
+}
